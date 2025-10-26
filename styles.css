@@ -1,0 +1,213 @@
+/* Styles moved from inline <style> in portfolio-v1.html */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  /* Dark page background */
+  background-color: #071023;
+  color: #d8e9ff; /* light text for contrast */
+  position: relative; /* allow absolutely positioned GIFs */
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p.intro {
+  font-size: 1.2em;
+  color: #555;
+}
+
+section.projects {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 { margin-top: 0; }
+
+.placeholder {
+  font-style: italic;
+  color: #888;
+}
+
+/* GIF placement styles */
+.header-gif {
+  width: 96px; /* slightly larger header badge */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 12px;
+  border-radius: 8px;
+}
+
+.corner-gif {
+  position: absolute;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none; /* decorative only */
+  mix-blend-mode: normal;
+}
+
+/* Per-corner sizing and placement */
+.top-left {
+  top: 12px;
+  left: 12px;
+  width: 120px;
+}
+.top-right {
+  top: 12px;
+  right: 12px;
+  width: 100px;
+}
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  width: 110px;
+}
+.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  width: 90px;
+}
+
+/* Responsive tweaks: hide corner GIFs on small screens to avoid overlap */
+@media (max-width: 640px) {
+  .corner-gif { display: none; }
+  body { margin: 20px; }
+  .header-gif { width: 72px; }
+}
+
+/* Header background and nav */
+header {
+  /* Lighter header on top of dark page */
+  background: linear-gradient(120deg, #f7fbff 0%, #e6f0ff 60%);
+  color: #071023; /* dark heading text to contrast the light header */
+  padding: 36px 20px;
+  text-align: center;
+}
+
+/* Rounded header and subtle elevation */
+header {
+  border-radius: 14px;
+  overflow: hidden; /* ensures children don't spill outside rounded corners */
+  margin-bottom: 22px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.45);
+}
+
+/* A centered content container to keep layout tidy */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 14px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: inline-flex;
+  gap: 12px;
+}
+
+nav a {
+  color: #071023; /* dark links to match header text */
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #ffd166;
+  color: #111;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+/* Main sections */
+main {
+  margin-top: 28px;
+  padding-bottom: 80px;
+}
+
+section.card {
+  /* card on dark background: slightly lighter than body with subtle border */
+  background: #0b2340;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.5);
+  margin-bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Experience collapsible */
+.job {
+  border-left: 4px solid #0b66ff;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.job .job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job button.toggle {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.job .job-body { display: none; margin-top: 10px; }
+.job.open .job-body { display: block; }
+
+/* Skill bars */
+.skill { margin-bottom: 10px; }
+.skill .label { font-weight: 600; margin-bottom: 6px; }
+.skill .bar { background: #e6eef9; height: 12px; border-radius: 8px; overflow: hidden; }
+.skill .fill { height: 100%; background: linear-gradient(90deg,#0b66ff,#00c2ff); width: 60%; }
+
+/* Contact form */
+.contact-form { display: grid; gap: 8px; }
+.contact-form input, .contact-form textarea {
+  padding: 8px 10px; border: 1px solid #d6d9e6; border-radius: 6px; width: 100%;
+}
+.contact-form button { width: max-content; padding: 8px 12px; border-radius: 6px; background:#0b66ff; color:#fff; border:none; cursor:pointer; }
+
+/* Small helper for icons */
+.icon { margin-right: 8px; }
+
+@media (max-width: 800px) {
+  .container { padding: 0 12px; }
+  nav ul { flex-wrap: wrap; }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitchell's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="site-title">
+        <img class="header-gif" src="Powerpuff Girls Pastel Sticker by Cartoon Network.gif" alt="badge">
+        <div>
+          <h1>Mitchell Swanson</h1>
+          <p class="intro">Motivated Intern | Aspiring Full Stack Developer — Cape Town, South Africa</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="cta-btn" href="Mitchell_Swanson_CV.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I’m currently interning with the Western Cape Government’s International Relations Sub-Directorate, where I support international partnerships and project coordination. I’m also pursuing a Higher Certificate in Full Stack Web Development, building practical skills in HTML, CSS, JavaScript, and databases.
+      </p>
+      <p>
+        I’m passionate about bridging technology and governance, and I thrive on continuous learning and professional growth.
+      </p>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+
+      <div class="job" id="job-1">
+        <div class="job-header">
+          <div>
+            <h3>🏛️ Intern – Western Cape Government</h3>
+            <p><strong>Department of the Premier: International Relations</strong> | Apr 2025 – Present</p>
+          </div>
+          <div>
+            <button class="toggle">Details</button>
+          </div>
+        </div>
+        <div class="job-body">
+          <ul>
+            <li>Support coordination of international partnerships between regional provinces.</li>
+            <li>Assist in project management, documentation, and external communication.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job" id="job-2">
+        <div class="job-header">
+          <div>
+            <h3>📱 SIM Card Activation Associate – Flickswitch</h3>
+            <p><strong>Part-Time</strong> | Aug 2019 – Sep 2024</p>
+          </div>
+          <div>
+            <button class="toggle">Details</button>
+          </div>
+        </div>
+        <div class="job-body">
+          <ul>
+            <li>Prepared and activated client SIM cards for timely project delivery.</li>
+            <li>Maintained accurate records and developed workflow efficiency.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+
+      <div class="edu">
+        <h3>Higher Certificate in Information Technology</h3>
+        <p>Academic Institute of Excellence (AIE) | Jul 2025 – Jul 2026</p>
+        <ul>
+          <li>Focus: Full Stack Web Development</li>
+          <li>Skills: HTML, CSS, JavaScript, Databases, Version Control</li>
+        </ul>
+      </div>
+
+      <div class="edu">
+        <h3>National Senior Certificate – Diploma Pass</h3>
+        <p>Elroi Academy (SACAI-accredited) | Dec 2024</p>
+        <ul>
+          <li>Subjects: History, Tourism, Computer Applications Technology</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+
+      <h3>Technical Skills</h3>
+      <div class="skill">
+        <div class="label">Web Dev: HTML, CSS, JavaScript</div>
+        <div class="bar"><div class="fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Office Suite: Word, Excel, PowerPoint, Access</div>
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Project Tools: Notion, Trello, MS Teams</div>
+        <div class="bar"><div class="fill" style="width:78%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Typing Speed</div>
+        <div class="bar"><div class="fill" style="width:96%"></div></div>
+      </div>
+
+      <h3 style="margin-top:16px">Soft Skills</h3>
+      <ul>
+        <li>Time Management</li>
+        <li>Conflict Management</li>
+        <li>Communication & Collaboration</li>
+        <li>Adaptability</li>
+        <li>Problem Solving</li>
+        <li>Professionalism</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mitchellswansonemail@gmail.com">mitchellswansonemail@gmail.com</a></p>
+      <p>Phone: (083) 958-9522</p>
+      <p>Location: Cape Town, South Africa</p>
+
+      <h3 style="margin-top:12px">Send a message</h3>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required>
+        <input type="email" id="email" placeholder="Your email" required>
+        <textarea id="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p style="margin-top:10px; font-size:0.9em; color:#666">Or find me on <a href="#">GitHub</a> / <a href="#">LinkedIn</a>.</p>
+    </section>
+  </main>
+  <!-- Decorative GIFs placed around the page -->
+  <img class="corner-gif top-left" src="Fallout Sticker by Amazon Prime Video.gif" alt="sonic running">
+  <img class="corner-gif top-right" src="Arcade Game Vintage Sticker by Level Up SG.gif" alt="goku ultra instinct">
+  <img class="corner-gif bottom-left" src="Super Saiyan Sticker.gif" alt="powerpuff girls">
+  <img class="corner-gif bottom-right" src="Danger Warning Sticker by modelvault3d.gif" alt="video games sticker">
+  <script>
+    // Collapsible experience toggles and contact form handler
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.job button.toggle').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var job = btn.closest('.job');
+          job.classList.toggle('open');
+          btn.textContent = job.classList.contains('open') ? 'Hide' : 'Details';
+        });
+      });
+
+      // Simple contact form: opens mail client with prefilled message
+      var form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var message = document.getElementById('message').value;
+          var subject = encodeURIComponent('Portfolio message from ' + name);
+          var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+          window.location.href = 'mailto:mitchellswansonemail@gmail.com?subject=' + subject + '&body=' + body;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
