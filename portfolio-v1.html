@@ -10,7 +10,7 @@
   <header>
     <div class="container">
       <div class="site-title">
-        <img class="header-gif" src="Powerpuff Girls Pastel Sticker by Cartoon Network.gif" alt="badge">
+        <img class="header-gif" src="assets/powerpuff-pastel.gif" alt="Powerpuff pastel badge">
         <div>
           <h1>Mitchell Swanson</h1>
           <p class="intro">Motivated Intern | Aspiring Full Stack Developer — Cape Town, South Africa</p>
@@ -25,7 +25,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="cta-btn" href="Mitchell_Swanson_CV.pdf" download>Download CV</a>
+        <a class="cta-btn" href="assets/Mitchell_Swanson_CV.pdf" download>Download CV</a>
       </nav>
     </div>
   </header>
@@ -151,10 +151,10 @@
     </section>
   </main>
   <!-- Decorative GIFs placed around the page -->
-  <img class="corner-gif top-left" src="Fallout Sticker by Amazon Prime Video.gif" alt="sonic running">
-  <img class="corner-gif top-right" src="Arcade Game Vintage Sticker by Level Up SG.gif" alt="goku ultra instinct">
-  <img class="corner-gif bottom-left" src="Super Saiyan Sticker.gif" alt="powerpuff girls">
-  <img class="corner-gif bottom-right" src="Danger Warning Sticker by modelvault3d.gif" alt="video games sticker">
+  <img class="corner-gif top-left" src="assets/fallout-sticker.gif" alt="fallout running">
+  <img class="corner-gif top-right" src="assets/arcade-vintage.gif" alt="arcade vintage">
+  <img class="corner-gif bottom-left" src="assets/super-saiyan.gif" alt="super saiyan">
+  <img class="corner-gif bottom-right" src="assets/danger-warning.gif" alt="danger warning">
   <script>
     // Collapsible experience toggles and contact form handler
     document.addEventListener('DOMContentLoaded', function () {
@@ -175,7 +175,7 @@
           var email = document.getElementById('email').value;
           var message = document.getElementById('message').value;
           var subject = encodeURIComponent('Portfolio message from ' + name);
-          var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+          var body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + message);
           window.location.href = 'mailto:mitchellswansonemail@gmail.com?subject=' + subject + '&body=' + body;
         });
       }
