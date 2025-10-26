@@ -1,11 +1,47 @@
-/* Styles moved from inline <style> in portfolio-v1.html */
+/* CSS Variables for theming */
+:root {
+  /* Light theme (default) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --nav-hover: #f1f5f9;
+  --skill-bar-bg: #e2e8f0;
+  --input-border: #cbd5e1;
+  --header-gradient: linear-gradient(120deg, #ffffff 0%, #f8fafc 100%);
+  --body-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --shadow-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --accent-primary: #60a5fa;
+  --accent-secondary: #93c5fd;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --skill-bar-bg: #334155;
+  --input-border: #475569;
+  --header-gradient: linear-gradient(120deg, #1e293b 0%, #0f172a 100%);
+  --body-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+}
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  /* Dark page background */
-  background-color: #071023;
-  color: #d8e9ff; /* light text for contrast */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  /* Modern gradient background */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9; /* Modern light text for contrast */
   position: relative; /* allow absolutely positioned GIFs */
   min-height: 100vh;
 }
@@ -157,13 +193,15 @@ main {
 }
 
 section.card {
-  /* card on dark background: slightly lighter than body with subtle border */
-  background: #0b2340;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.5);
-  margin-bottom: 18px;
-  border: 1px solid rgba(255,255,255,0.03);
+  /* Modern glassmorphism style */
+  background: rgba(30, 41, 59, 0.7);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  position: relative; /* for GIF positioning */
 }
 
 /* Experience collapsible */
@@ -204,10 +242,31 @@ section.card {
 }
 .contact-form button { width: max-content; padding: 8px 12px; border-radius: 6px; background:#0b66ff; color:#fff; border:none; cursor:pointer; }
 
+/* Section GIFs */
+.section-gif {
+  width: 48px;
+  height: auto;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.section-gif:hover {
+  transform: scale(1.1);
+}
+
 /* Small helper for icons */
 .icon { margin-right: 8px; }
 
 @media (max-width: 800px) {
   .container { padding: 0 12px; }
   nav ul { flex-wrap: wrap; }
+  .section-gif {
+    width: 36px;
+    top: -8px;
+    right: -8px;
+  }
 }

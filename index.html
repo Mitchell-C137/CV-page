@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mitchell's Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Mitchell Swanson - Full Stack Developer Portfolio. Experience in web development, project coordination, and international relations." />
+  <meta name="keywords" content="Mitchell Swanson, Full Stack Developer, Web Development, Cape Town, South Africa" />
+  <meta name="author" content="Mitchell Swanson" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Mitchell Swanson - Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Aspiring Full Stack Developer with experience in web development and international relations. Based in Cape Town, South Africa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mitchell-c137.github.io/CV-page/" />
+  <meta property="og:image" content="assets/HTML5_logo_and_wordmark.svg.png" />
+  
+  <title>Mitchell Swanson - Full Stack Developer Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/new-styles.css">
 </head>
 <body>
   <header>
@@ -25,13 +40,27 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a class="cta-btn" href="assets/Mitchell_Swanson_CV.pdf" download>Download CV</a>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a class="cta-btn" href="assets/Mitchell_Swanson_CV.pdf" download>Download CV</a>
+        </div>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section id="about" class="card">
+      <img class="section-gif" src="assets/Goku Ultra Instinct Sticker.gif" alt="Goku sticker">
       <h2>About Me</h2>
       <p>
         I’m currently interning with the Western Cape Government’s International Relations Sub-Directorate, where I support international partnerships and project coordination. I’m also pursuing a Higher Certificate in Full Stack Web Development, building practical skills in HTML, CSS, JavaScript, and databases.
@@ -42,6 +71,7 @@
     </section>
 
     <section id="experience" class="card">
+      <img class="section-gif" src="assets/Work Working Sticker by Helen Bucher.gif" alt="Working sticker">
       <h2>Experience</h2>
 
       <div class="job" id="job-1">
@@ -82,6 +112,7 @@
     </section>
 
     <section id="education" class="card">
+      <img class="section-gif" src="assets/HTML5_logo_and_wordmark.svg.png" alt="HTML5 logo">
       <h2>Education</h2>
 
       <div class="edu">
@@ -103,6 +134,7 @@
     </section>
 
     <section id="skills" class="card">
+      <img class="section-gif" src="assets/sonic the hedgehog Sticker.gif" alt="Sonic sticker">
       <h2>Skills</h2>
 
       <h3>Technical Skills</h3>
@@ -135,6 +167,7 @@
     </section>
 
     <section id="contact" class="card">
+      <img class="section-gif" src="assets/Dragon Ball Z Goku Super Saiyan Sticker.gif" alt="Contact sticker">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:mitchellswansonemail@gmail.com">mitchellswansonemail@gmail.com</a></p>
       <p>Phone: (083) 958-9522</p>
@@ -156,8 +189,34 @@
   <img class="corner-gif bottom-left" src="assets/super-saiyan.gif" alt="super saiyan">
   <img class="corner-gif bottom-right" src="assets/danger-warning.gif" alt="danger warning">
   <script>
-    // Collapsible experience toggles and contact form handler
+    // Theme management
+    function initializeTheme() {
+      // Check for saved theme preference or system preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Initialize theme when page loads
     document.addEventListener('DOMContentLoaded', function () {
+      initializeTheme();
+      
+      // Add theme toggle button handler
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+      }
       document.querySelectorAll('.job button.toggle').forEach(function(btn){
         btn.addEventListener('click', function(){
           var job = btn.closest('.job');

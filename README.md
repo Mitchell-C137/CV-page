@@ -1,6 +1,13 @@
-CV-page
-Simple personal portfolio site  
-A basic HTML page: name, a short intro, placeholder for projects.
+# CV-page
+Simple personal portfolio site
 
+A responsive single-page CV with:
+- Dark/light mode toggle
+- Semantic HTML structure
+- Modern, clean design
+- Interactive elements
+- Mobile-friendly layout
+- SEO optimized
+- Decorative GIFs and animations
 
-https://roadmap.sh/projects/single-page-cv
+Built following: https://roadmap.sh/projects/single-page-cv
